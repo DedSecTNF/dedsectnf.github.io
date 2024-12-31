@@ -4402,6 +4402,20 @@
                 </div>
                 <div class="TxnWlb" jsname="BDdyze" jsaction="click:LUvzV"></div>
               </div>
+              <script>
+                // JavaScript для динамической загрузки navbar
+                fetch('navbar.html')
+      .then(response => {
+          if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text();
+      })
+      .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+              </script>
             </header>
             <div role="main" tabindex="-1" class="UtePc RCETm" dir="ltr">
               <section id="h.463a2df18afc298_121" class="yaqOZd LB7kq cJgDec nyKByd O13XJf" style="">
